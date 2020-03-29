@@ -25,6 +25,15 @@
 
     <style>
 
+        /*
+        O que é  CSS?
+        Cascading Style Sheet
+
+        Folha de estilo em cascata
+
+
+        */
+
         body {
             background:#e5e5e5;
             color: #25282b;
@@ -36,17 +45,29 @@
             text-align: right;
         }
 
-        .fat{<!--configuracao de classes-->
-            color: red;
-        } 
-
-        #footer{<!--configuracao de ids, colocase uma vez 
-        so por elemento, nao pode repetir varias vezes-->
-            color: blue;
-        }
+        
 
         button{
+
+            color: #ff5E84;
+
             border: none;
+
+            font-weight: bold;
+
+            background: none;
+        }
+    
+        .fat{
+
+            color: white;
+            
+            background: #ff5E84;
+        } 
+
+        #footer a{
+            color: #25282b;
+            text-decoration: none;
         }
 
     </style>
@@ -69,16 +90,29 @@
     
     </p>
 
-    <p class="fat">
+    <p>
         Comece clicando
         em ver idéias para ver idéias cadastradas e contribua adicionando a sua ideia
     </p>
 
     <button>+ Adicionar idéia</button>
-    <button>Ver Idéias</button>
+    <button class="fat">Ver Idéias</button>
     
-    <p id="footer">Com ♥️ Ruifrankpbs</p>
+    <p id="footer">Com ♥️ <a href="https://www.linkedin.com/in/rui-oliveira-09105863/">Ruifrankpbs</a></p>
 
+    <script>
+
+        document
+            .querySelector("button.fat")
+            .addEventListener("click", function(){
+                document
+                .querySelector("#footer")
+                .classList
+                .toggle("hide")
+            })
+
+    </script>
 </body>
+
 
 </html>
